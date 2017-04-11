@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UISelect : View
+public class UISystem : View
 {
     #region 常量
     #endregion
@@ -11,30 +12,26 @@ public class UISelect : View
     #endregion
 
     #region 字段
+    public Button btnResume;
+    public Button btnRestart;
+    public Button btnSelect;
     #endregion
 
     #region 属性
     public override string Name
     {
-        get { return Consts.V_Select; }
+        get { return Consts.V_System; }
     }
     #endregion
 
     #region 方法
-    // 返回到开始界面
-    public void GoBack()
+    public void Show()
     {
-        Game.Instance.LoadScene(1); // 开始场景序号 = 1
+        this.gameObject.SetActive(true);
     }
-    // 选中关上游戏
-    public void ChooseLevel()
+    public void Hide()
     {
-        StartLevelArgs e = new StartLevelArgs()
-        {
-            LevelID = 0
-        };
-
-        SendEvent(Consts.E_StartLevel, e);
+        this.gameObject.SetActive(false);
     }
     #endregion
 
@@ -44,11 +41,22 @@ public class UISelect : View
     #region 事件回调
     public override void HandleEvent(string eventName, object data)
     {
-        
+
+    }
+    public void OnRestartClick()
+    {
+
+    }
+    public void OnResumeClick()
+    {
+
+    }
+    public void OnSelectClick()
+    {
+
     }
     #endregion
 
     #region 帮助方法
     #endregion
-
 }
