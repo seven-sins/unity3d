@@ -36,7 +36,7 @@ public class UIComplete : View
     }
     public void OnRestartClick()
     {
-
+        Game.Instance.LoadScene(1);
     }
     public void OnClearClick()
     {

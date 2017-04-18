@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using UnityEngine;
 
 public static class Consts
@@ -8,11 +7,11 @@ public static class Consts
     // 关卡目录
     public static string LevelDir = Application.dataPath + "/Resources/Res/Level/";
     public static string MapDir = Application.dataPath + "/Resources/Res/Scene/Map/";
-
+    public static string CardDir = Application.dataPath + "/Resources/Res/Cards/";
     // 存档
-
+    public const string GameProgress = "GameProgress";
     // Model
-
+    public const string M_GameModel = "M_GameModel";
     // View
     public const string V_Start = "V_Start";
     public const string V_Select = "V_Select";
@@ -31,6 +30,7 @@ public static class Consts
 
     public const string E_StartLevel = "E_StartLevel"; // 开始关卡
     public const string E_EndLevel = "E_EndLevel"; // 结束关卡
+
 
     // 倒计时结束
     public const string E_CountDownComplete = "E_CountDownComplete";

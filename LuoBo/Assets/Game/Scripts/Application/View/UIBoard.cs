@@ -74,13 +74,21 @@ public class UIBoard : View
         this.Score = 0;
         this.IsPlaying = true;
         this.Speed = GameSpeed.One;
+
     }
     #endregion
 
     #region 事件回调
     public override void HandleEvent(string eventName, object data)
     {
-
+        switch (eventName)
+        {
+            //case Consts.E_CountDownComplete:
+            //    Game.Instance.LoadScene(4);
+            //    break;
+            default:
+                break;
+        }
     }
     public void OnSpeed1Click()
     {
@@ -101,6 +109,11 @@ public class UIBoard : View
     public void OnSystemClick()
     {
 
+    }
+
+    public override void RegisterEvents()
+    {
+        // this.AttationEvents.Add(Consts.E_CountDownComplete);
     }
     #endregion
 

@@ -23,7 +23,7 @@ public class Game : ApplicationBase<Game>
 
         // 事件参数
         SceneArgs e = new SceneArgs();
-        e.Level = SceneManager.GetActiveScene().buildIndex;
+        e.SceneIndex = SceneManager.GetActiveScene().buildIndex;
         // 发布事件
         SendEvent(Consts.E_ExitScene, e);
 
@@ -33,10 +33,9 @@ public class Game : ApplicationBase<Game>
     // 当前场景加载完成后触发
     void OnLevelWasLoaded(int level)
     {
-        Debug.Log("OnLevelWasLoaded: " + level);
         // 事件参数
         SceneArgs e = new SceneArgs();
-        e.Level = level;
+        e.SceneIndex = level;
         // 发布事件
         SendEvent(Consts.E_EnterScene, e);
     }

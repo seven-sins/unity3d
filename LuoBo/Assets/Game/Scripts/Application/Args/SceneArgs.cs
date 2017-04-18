@@ -4,6 +4,6 @@ using System.Text;
 
 public class SceneArgs
 {
-    // 场景索引
-    public int Level;
+    // 场景索引号
+    public int SceneIndex;
 }

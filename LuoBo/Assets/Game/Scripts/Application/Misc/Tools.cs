@@ -30,6 +30,7 @@ public class Tools
         doc.Load(sr);
 
         level.Name = doc.SelectSingleNode("/Level/Name").InnerText;
+        level.CardImage = doc.SelectSingleNode("/Level/CardImage").InnerText;
         level.Background = doc.SelectSingleNode("/Level/Background").InnerText;
         level.Road = doc.SelectSingleNode("/Level/Road").InnerText;
         level.InitScore = int.Parse(doc.SelectSingleNode("/Level/InitScore").InnerText);

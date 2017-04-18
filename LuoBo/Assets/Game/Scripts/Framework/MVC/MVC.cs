@@ -30,24 +30,24 @@ public static class MVC
         CommandMap[eventName] = controllerType;
     }
     // 获取
-    public static Model GetModel<T>() where T : Model
+    public static T GetModel<T>() where T : Model
     {
         foreach (Model m in Models.Values)
         {
             if (m is T)
             {
-                return m;
+                return m as T;
             }
         }
         return null;
     }
-    public static View GetView<T>() where T : View
+    public static T GetView<T>() where T : View
     {
         foreach (View v in Views.Values)
         {
             if (v is T)
             {
-                return v;
+                return v as T;
             }
         }
         return null;

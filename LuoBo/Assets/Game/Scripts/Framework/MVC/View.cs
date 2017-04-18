@@ -17,9 +17,9 @@ public abstract class View : MonoBehaviour
     // 事件处理函数
     public abstract void HandleEvent(string eventName, object data);
     // 获取模型
-    protected Model GetModel<T>() where T : Model
+    protected T GetModel<T>() where T : Model
     {
-        return MVC.GetModel<T>();
+        return MVC.GetModel<T>() as T;
     }
 
     // 发送消息
