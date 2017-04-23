@@ -64,7 +64,7 @@ public class Tools
                 int.Parse(node.Attributes["Monster"].Value),
                 int.Parse(node.Attributes["Count"].Value)
                 );
-            level.Round.Add(p);
+            level.Rounds.Add(p);
         }
 
         sr.Close();
@@ -99,9 +99,9 @@ public class Tools
         sb.AppendLine("</Path>");
 
         sb.AppendLine("<Rounds>");
-        for (int i = 0; i < level.Round.Count; i++)
+        for (int i = 0; i < level.Rounds.Count; i++)
         {
-            sb.AppendLine(string.Format("<Round Monster=\"{0}\" Count=\"{1}\"/>", level.Round[i].Monster, level.Round[i].Count));
+            sb.AppendLine(string.Format("<Round Monster=\"{0}\" Count=\"{1}\"/>", level.Rounds[i].Monster, level.Rounds[i].Count));
         }
         sb.AppendLine("</Rounds>");
 

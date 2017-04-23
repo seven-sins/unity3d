@@ -19,5 +19,5 @@ public class Level
     // 怪物行走路线
     public List<Point> Path = new List<Point>();
     // 回合数
-    public List<Round> Round = new List<Round>();
+    public List<Round> Rounds = new List<Round>();
 }

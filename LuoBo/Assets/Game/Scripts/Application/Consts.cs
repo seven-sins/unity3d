@@ -12,6 +12,7 @@ public static class Consts
     public const string GameProgress = "GameProgress";
     // Model
     public const string M_GameModel = "M_GameModel";
+    public const string M_RoundModel = "M_RoundModel";
     // View
     public const string V_Start = "V_Start";
     public const string V_Select = "V_Select";
@@ -21,6 +22,7 @@ public static class Consts
     public const string V_Win = "V_Win";
     public const string V_Lost = "V_Lost";
     public const string V_System = "V_System";
+    public const string V_Spawner = "V_Spawner";
 
     // Controller
     public const string E_StartUp = "E_StartUp";
@@ -31,13 +33,24 @@ public static class Consts
     public const string E_StartLevel = "E_StartLevel"; // 开始关卡
     public const string E_EndLevel = "E_EndLevel"; // 结束关卡
 
-
     // 倒计时结束
     public const string E_CountDownComplete = "E_CountDownComplete";
+
+    public const string E_StartRound = "E_StartRound"; // 回合开始 StartRoundArgs
+    public const string E_SpawnMonster = "E_SpawnMonster";
+
 }
 
 public enum GameSpeed
 {
     One,
     Two
+}
+
+public enum MonsterType
+{
+    Monster0,
+    Monster1,
+    Monster2,
+    Monster3
 }

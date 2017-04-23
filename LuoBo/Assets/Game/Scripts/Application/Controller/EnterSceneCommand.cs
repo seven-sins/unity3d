@@ -21,6 +21,7 @@ public class EnterSceneCommand : Controller
                 break;
             case 3: // level
                 RegisterView(GameObject.Find("UIBoard").GetComponent<UIBoard>());
+                RegisterView(GameObject.Find("Map").GetComponent<Spawner>());
                 // 隐藏对象不能直接Find查找， 只能通过父级查找
                 RegisterView(GameObject.Find("Canvas").transform.Find("UICountDown").GetComponent<UICountDown>());
                 RegisterView(GameObject.Find("Canvas").transform.Find("UIWin").GetComponent<UIWin>());
